@@ -1,0 +1,124 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  height: 150px;
+  background: #1e88e5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.upload-btn {
+  background: white;
+  color: #1e88e5;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+#viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 150px); /* hauteur header */
+  overflow: hidden;
+}
+
+#zoom-content {
+  position: absolute;
+  inset: 0;
+
+  transform-origin: 0 0; /* 🔴 CRUCIAL */
+}
+
+#links-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#nodes-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.node {
+  position: absolute;
+  padding: 2.5px;
+  height: 30px;
+  background: #e3f2fd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;      /* centre verticalement */
+  justify-content: center;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ZOOM CONTROLS */
+.zoom-controls {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  background: #f2f2f2;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.zoom-row {
+  display: flex;
+}
+
+.zoom-row button {
+  width: 48px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+}
+
+#zoom-out:hover {
+  border-radius: 10px;
+  background: #eaeaea;
+  cursor: pointer;
+}
+
+#zoom-in:hover {
+  border-radius: 10px;
+  background: #eaeaea;
+  cursor: pointer;
+}
+
+.reset-btn {
+  height: 32px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #eaeaea;
+}

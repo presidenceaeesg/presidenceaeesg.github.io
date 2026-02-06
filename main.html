@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visualisation de votre organisation</title>
+
+  <!-- Dagre -->
+  <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+
+  <!-- XLSX -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+  <link rel="stylesheet" href="style_2.css" />
+</head>
+
+<body>
+
+<header class="header">
+      
+      <div class="header-center">
+        <h1>Visualisation de votre organisation</h1>
+
+        <label for="excel-upload" class="upload-btn">
+          Importer Excel
+        </label>
+        <input
+          type="file"
+          id="excel-upload"
+          accept=".xls,.xlsx"
+          hidden
+        />
+      </div>
+    
+      <div class="zoom-controls">
+        <div class="zoom-row">
+          <button id="zoom-out">−</button>
+          <button id="zoom-in">+</button>
+        </div>
+      
+        <button id="zoom-reset" class="reset-btn">Reset</button>
+      </div>
+    
+    </header>
+
+<main id="viewport">
+    <div id="zoom-content">
+        <svg id="links-layer"></svg>
+        <div id="nodes-layer"></div>
+    </div>
+</main>
+
+<script src="organisation_3.js"></script>
+<script src="zoom.js"></script>
+</body>
+</html>
